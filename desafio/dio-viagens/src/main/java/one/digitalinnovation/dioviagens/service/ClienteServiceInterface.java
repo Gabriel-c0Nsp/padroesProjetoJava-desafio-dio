@@ -10,8 +10,8 @@ public interface ClienteServiceInterface {
 
   void inserir(Cliente cliente);
 
-  // void atualizar(Long id, Cliente cliente);
+  void atualizar(Long id, Cliente cliente);
 
-  // void deletar(Long id);
+  void deletar(Long id);
 
 }

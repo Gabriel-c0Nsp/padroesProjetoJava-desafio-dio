@@ -30,4 +30,17 @@ public class ClienteService implements ClienteServiceInterface {
     clienteRepository.save(cliente);
   }
 
+  @Override
+  public void atualizar(Long id, Cliente cliente) {
+    Optional<Cliente> clienteBancoDados = clienteRepository.findById(id);
+    if (clienteBancoDados.isPresent()) {
+      inserir(cliente);
+    }
+  }
+
+  @Override
+  public void deletar(Long id) {
+    clienteRepository.deleteById(id);
+  }
+
 }
